@@ -3,8 +3,8 @@ import torch
 configurations = {
     1: dict(
         SEED = 1337, # random seed for reproduce results
-        DATA_ROOT = '/fs/janus-scratch/snanduri/',
-        RECORD_DIR = '/fs/janus-scratch/snanduri/', # the dataset record dir
+        DATA_ROOT = '/fs/janus-scratch/snanduri/lfw_align_112/',
+        RECORD_DIR = '/fs/janus-scratch/snanduri/LWLL/neehar_arl/JANUS/Utilities/ARLFaces/ModelSize/UniverseFaces_Train_5MDS_40481ID.txt', # the dataset record dir
         MODEL_ROOT = './train_log/model', # the root to buffer your checkpoints
         LOG_ROOT = './train_log/log', # the root to log your train/val status
         BACKBONE_RESUME_ROOT = "./backbone/CurricularFace_Backbone.pth",

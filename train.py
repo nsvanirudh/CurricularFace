@@ -61,6 +61,8 @@ def main_worker(gpu, ngpus_per_node, cfg):
     RGB_STD = cfg['RGB_STD']
     train_transform = transforms.Compose([
            transforms.RandomHorizontalFlip(),
+           transforms.Resize((128, 128)),
+           transforms.CenterCrop((112, 112)),
            transforms.ToTensor(),
            transforms.Normalize(mean = RGB_MEAN,
                             std = RGB_STD),])
