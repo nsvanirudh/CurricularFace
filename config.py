@@ -3,11 +3,11 @@ import torch
 configurations = {
     1: dict(
         SEED = 1337, # random seed for reproduce results
-        DATA_ROOT = '/data2/yugehuang/data/', # the parent root where your train/val/test data are stored
-        RECORD_DIR = '/data2/yugehuang/data/refined_ms1m.txt', # the dataset record dir
+        DATA_ROOT = '/fs/janus-scratch/snanduri/',
+        RECORD_DIR = '/fs/janus-scratch/snanduri/', # the dataset record dir
         MODEL_ROOT = './train_log/model', # the root to buffer your checkpoints
         LOG_ROOT = './train_log/log', # the root to log your train/val status
-        BACKBONE_RESUME_ROOT = "",
+        BACKBONE_RESUME_ROOT = "./backbone/CurricularFace_Backbone.pth",
         HEAD_RESUME_ROOT = "",
         BACKBONE_NAME = 'IR_101', # support: ['ResNet_50', 'ResNet_101', 'ResNet_152', 'IR_50', 'IR_101', 'IR_152', 'IR_SE_50', 'IR_SE_101', 'IR_SE_152']
         HEAD_NAME = "CurricularFace", # support:  ['ArcFace', 'CurricularFace']
@@ -29,6 +29,6 @@ configurations = {
         DIST_BACKEND = 'nccl',
         DIST_URL = 'tcp://localhost:23456',
         NUM_WORKERS = 5,
-        TEST_GPU_ID = [0,1,2,3,4,5,6,7]
+        TEST_GPU_ID = [0,1,2,3,4,5,6,7,8,9]
     ),
 }
